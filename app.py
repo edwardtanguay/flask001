@@ -31,8 +31,12 @@ def hello_world_french():
 	<p>[<a href="/french">French</a>] | [<a href="/">English</a>]
 	<p>C'est un site Python/Flask.</p>
 </body>
-</html>'''
+</html>''' 
+
+@app.route("/product/<id>")
+def product_id(id):
+	return f"You are viewing product #{id}"
 
 if __name__ == "__main__":
-    app.run(port=3727)
+    app.run(port=3727, debug=True)
 
