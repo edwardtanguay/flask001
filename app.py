@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -36,6 +36,10 @@ def hello_world_french():
 @app.route("/product/<id>")
 def product_id(id):
 	return f"You are viewing product #{id}"
+
+@app.route("/welcome")
+def temp1():
+	return render_template("main.html", pageTitle = "Welcome")
 
 if __name__ == "__main__":
     app.run(port=3727, debug=True)
