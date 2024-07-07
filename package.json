@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "python app.py",
-    "start": "python app.py",
+    "start": "python3 app.py",
     "setup": "npm i && pm2 start --name flask-tanguay-eu npm -- start --update-env --time && pm2 save",
     "deploy": "git pull --no-rebase && pm2 restart flask-tanguay-eu --update-env --time && pm2 save"
   },
